@@ -14,7 +14,7 @@ public class Calcuuu {
     Color customBlack = new Color(28, 28, 28);
     Color customOrange = new Color(255, 149, 0);
 
-    String[] buttonvalues = {
+    String[] buttonValues = {
         "AC", "+/-", "%", "÷",
         "7", "8", "9", "×",
         "4", "5", "6", "-",
@@ -53,8 +53,13 @@ public class Calcuuu {
         buttonsPanel.setBackground(customBlack);
         frame.add(buttonsPanel);
 
-        for (int i = 0; i < buttonvalues.length; i++) {
-            
+        for (int i = 0; i < buttonValues.length; i++) {
+            JButton button = new JButton();
+            String buttonValue = buttonValues[i];
+            button.setFont(new Font("Arial", Font.PLAIN, 30));
+            button.setText(buttonValue);
+            button.setFocusable(false);
+            buttonsPanel.add(button);
         }
     }
 }
